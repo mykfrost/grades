@@ -12,7 +12,7 @@ console.log(calculateGrade(array));
 
 function calculateGrade(marks){
 
-
+const average = calculateAverage(marks);
 // if (average >= 0 && average <= 59) return 'F';
 
 // if (average >= 60 && average <= 69) return 'D';
