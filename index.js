@@ -1,4 +1,4 @@
-const marks = [80 , 80 , 50] ;
+const array = [80 , 80 , 50] ;
 
 //average = 70
 
@@ -8,17 +8,10 @@ const marks = [80 , 80 , 50] ;
 //80-89 B
 //90-100 A
 
-console.log(calculateGrade(marks));
+console.log(calculateGrade(array));
 
 function calculateGrade(marks){
- let sum = 0;
-//iterate through the array and add all values to sum
- for (let mark of marks)
- sum+= mark;// this is the total 
 
- //calculating the average
-
- let average = sum / marks.length;
 
 // if (average >= 0 && average <= 59) return 'F';
 
@@ -30,10 +23,23 @@ function calculateGrade(marks){
 
 // if (average >= 90 && average <= 100) return 'F';
 
+//coment out this second solution
 if (average < 60) return 'F';
 if (average < 70) return 'D';
 if (average < 80) return 'C';
 if (average <  90) return 'B';
-if (average < 100) return 'F';
+ return 'A';
+
+}
+
+//Simple fucntion for calculating averages
+function calculateAverage (array){
+    let sum = 0;
+    //iterate through the array and add all values to sum
+     for (let value of array)
+     sum+= value;// this is the total 
+    
+   //calculating the average
+  return  sum / array.length;
 
 }
